@@ -1,0 +1,5 @@
+import {Library} from './model/Library'
+import {Book} from './model/Book'
+import {Magazine} from './model/Magazine'
+import {} from './model/Newspaper'
+import {} from './service/LibManager'

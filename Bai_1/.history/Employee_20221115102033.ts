@@ -1,0 +1,9 @@
+export enum Gen {
+
+}
+export class Employee {
+    private _name: string;
+    private _age: number;
+    private _gender: Gender;
+    
+}
