@@ -67,11 +67,11 @@ export class LibraryManager implements IManager<Library> {
         return -1;
     }
 
-    checkId(index:number):number{
+    check(index:number):number{
         let flag;
         flag = 0
-        for (let i = 0; i < this.listDocuments.length; i++) {
-            if (this.listDocuments[i].id === index){
+        for (let i = 0; i < this.documentList.length; i++) {
+            if (this.documentList[i].documentCode === index){
                 flag ++;
             }
         }

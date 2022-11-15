@@ -54,7 +54,7 @@ function addMagazine() {
     let releaseAmount = readlineSync.question(`Enter release amount: `);
     let releaseMonth = +readlineSync.question(`Enter release month: `);
     let magazine = new Magazine(id, publishingCompany, releaseNumber, releaseAmount, releaseMonth);
-    if (libraryManager.checkId(id) === -1) libraryManager.add(magazine);
+    if (libraryManager.checkId(id) === -1) libraryManager.add(magazines);
     else {
         console.log(`-------------Id đã nhập, yêu cầu nhập lại------------`);
         addMagazine()
@@ -71,7 +71,7 @@ function addNewspaper() {
     if (libraryManager.checkId(id) === -1) libraryManager.add(newspaper);
     else {
         console.log(`-------------Id đã nhập, yêu cầu nhập lại------------`);
-        addNewspaper()
+        addBook()
     }
 }
 

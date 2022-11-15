@@ -71,7 +71,7 @@ export class LibraryManager implements IManager<Library> {
         let flag;
         flag = 0
         for (let i = 0; i < this.listDocuments.length; i++) {
-            if (this.listDocuments[i].id === index){
+            if (this.li[i].documentCode === index){
                 flag ++;
             }
         }

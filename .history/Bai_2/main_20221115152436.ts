@@ -41,8 +41,8 @@ function addBook() {
     let book = new Book(id, publishingCompany, releaseNumber, author, pageNumber);
     if (libraryManager.checkId(id) === -1) libraryManager.add(book);
     else {
-        console.log(`-------------Id đã nhập, yêu cầu nhập lại------------`);
-        addBook()
+        console.log();
+        
     }
 }
 
@@ -54,11 +54,7 @@ function addMagazine() {
     let releaseAmount = readlineSync.question(`Enter release amount: `);
     let releaseMonth = +readlineSync.question(`Enter release month: `);
     let magazine = new Magazine(id, publishingCompany, releaseNumber, releaseAmount, releaseMonth);
-    if (libraryManager.checkId(id) === -1) libraryManager.add(magazine);
-    else {
-        console.log(`-------------Id đã nhập, yêu cầu nhập lại------------`);
-        addMagazine()
-    }
+    libraryManager.add(magazine);
 }
 
 function addNewspaper() {
@@ -68,11 +64,7 @@ function addNewspaper() {
     let releaseNumber = +readlineSync.question(`Enter release number: `);
     let releaseDate = readlineSync.question(`Enter release date: `);
     let newspaper = new Newspaper(id, publishingCompany, releaseNumber, releaseDate, );
-    if (libraryManager.checkId(id) === -1) libraryManager.add(newspaper);
-    else {
-        console.log(`-------------Id đã nhập, yêu cầu nhập lại------------`);
-        addNewspaper()
-    }
+    libraryManager.add(newspaper);
 }
 
 function deleteDocument() {
